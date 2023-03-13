@@ -1,8 +1,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:group_app/src/pages/group_page.dart';
 import 'package:uuid/uuid.dart';
+
+import 'Individual_chat_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -90,7 +93,9 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {
+          Get.to(() => IndividualChatPage());
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
